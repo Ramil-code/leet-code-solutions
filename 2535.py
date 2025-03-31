@@ -16,7 +16,7 @@ def mergeSimilarItems(self, items1, items2):
 #sorting the dictionary            
     sorted_total=sorted(total)
 #Gatehring the ret list form dictionary
-    for value in sorted_keys:
+    for value in sorted_total:
         weight=total[value]
         two=[value,weight]
         ret.append(two)
