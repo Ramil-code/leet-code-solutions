@@ -23,6 +23,8 @@ class MyHashMap:
                     return
             self.map[new_hash].append(key_value)
 
+#Get pair by the key
+
     def get(self, key: int) -> int:
         key_hash=self.get_hash(key)
         if self.map[key_hash] is not None:
@@ -30,11 +32,13 @@ class MyHashMap:
                 if pair[0]==key:
                     return pair[1]
         return -1
-    
+
+#remove the pair by key
+
     def remove(self, key: int) -> None:
         key_hash=self.get_hash(key)
-        if self.get_hash[key_hash] is not None:
-            for i in range (0, len(self.get_hash[key_hash])):
-                if self.get_hash[key_hash][i][0]==key:
-                    self.get_hash[key_hash].pop(i)
+        if self.map[key_hash] is not None:
+            for i in range (0, len(self.map[key_hash])):
+                if self.map[key_hash][i][0]==key:
+                    self.map[key_hash].pop(i)
             
