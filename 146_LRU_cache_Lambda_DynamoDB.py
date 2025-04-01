@@ -1,7 +1,7 @@
 from collections import OrderedDict
 
-class LRUCache(object):
-    def __init__(self,capacity:int):
+class LRUCache:
+    def __init__(self,capacity):
         self.cache=OrderedDict()
         self.capacity =capacity
     
