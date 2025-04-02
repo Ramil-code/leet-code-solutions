@@ -3,12 +3,12 @@ class Solution:
         max_len=0
 
         for i in range (len(s)):
-            z=set()
+            added=set()
+            
             for x in range (i, len(s)):
-                if s[x] in z:
+                if s[x] in added:
                     break
-                z.add(s[j])
-            max_len=max(len_max, x-i+1)
+                added.add(s[x])
+                max_len=max(max_len,i-x+1)
+        
         return max_len
-
-
