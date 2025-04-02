@@ -1,5 +1,14 @@
-def lengthOfLongestSubstring(self, s: str) -> int:
-            y=s[0:2]
-            print (y)
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        max_len=0
 
-lengthOfLongestSubstring("cat")
+        for i in range (len(s)):
+            z=set()
+            for x in range (i, len(s)):
+                if s[x] in z:
+                    break
+                z.add(s[j])
+            max_len=max(len_max, x-i+1)
+        return max_len
+
+
